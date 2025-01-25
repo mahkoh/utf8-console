@@ -1,0 +1,16 @@
+[package]
+name = "utf8-console"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80.0"
+repository = "https://github.com/mahkoh/utf8-console"
+license = "MIT OR Apache-2.0"
+description = "Cross-platform enabling of UTF-8 console IO"
+keywords = ["cli", "terminal"]
+categories = ["command-line-utilities", "api-bindings", "os"]
+readme = "../README.md"
+
+[target."cfg(windows)".dependencies.windows-sys]
+version = "0.59.0"
+default-features = false
+features = ["Win32_Globalization", "Win32_System_Console"]
